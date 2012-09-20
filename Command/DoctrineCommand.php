@@ -38,5 +38,6 @@ abstract class DoctrineCommand extends BaseCommand
         $configuration->registerMigrationsFromDirectory($dir);
         $configuration->setName($container->getParameter('doctrine_migrations.name'));
         $configuration->setMigrationsTableName($container->getParameter('doctrine_migrations.table_name'));
+        $configuration->setContainer($container);
     }
 }
